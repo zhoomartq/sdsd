@@ -1,6 +1,7 @@
 import re
 
 
+
 def get_field_type(string: str):
     patterns = {
         "date": r'^((0?[13578]|10|12)(-|\/)(([1-9])|(0[1-9])|([12])([0-9]?)|(3[01]?))(-|\/)((19)([2-9])(\d{1})|(20)(['
@@ -15,3 +16,5 @@ def get_field_type(string: str):
         if re.match(patterns[pattern], string):
             return pattern
     return 'text'
+
+
